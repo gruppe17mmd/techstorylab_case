@@ -2,6 +2,11 @@
   border-radius: 100px;
 }
 
+.flexIMGtext {
+  line-height: 0.8em;
+  padding-bottom: 2em;
+}
+
 .flex3 {
   display: flex;
   flex-direction: row;
@@ -20,15 +25,26 @@
   align-items: center;
 }
 
+.flex4 {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  gap: 2em;
+}
+
 .grid1_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .grid2_1 {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
+  padding-bottom: 2em;
 }
 
 .SeMereBTN {
@@ -47,4 +63,33 @@
 
 .kortIMG {
   width: 100%;
+}
+
+@media (max-width: 750px) {
+  main {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  .grid2_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 2em;
+  }
+
+  .SeMereBTN {
+    margin-bottom: 2em;
+  }
+
+  .flex3 {
+    flex-direction: column;
+  }
+
+  .colorBG {
+    margin-top: 1em;
+  }
+
+  .flex4 {
+    flex-direction: column;
+  }
 }
