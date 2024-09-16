@@ -1,0 +1,89 @@
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/Helvetica\ Neue\ LT\ Std\ 77\ Bold\ Condensed.woff2);
+}
+
+@font-face {
+  font-family: Helvetica small;
+  src: url(../fonts/Helvetica\ Neue\ LT\ Std\ 55\ Roman.woff2);
+}
+
+h1 {
+  font-family: Helvetica;
+  font-size: 40pt;
+}
+
+h2 {
+  font-family: Helvetica;
+  font-size: 23pt;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: Helvetica;
+  font-size: 10pt;
+}
+
+h4 {
+  font-family: Helvetica;
+  font-size: 10pt;
+}
+
+p {
+  font-family: Helvetica small;
+  font-size: 13pt;
+}
+
+body {
+  background-color: rgba(217, 217, 217, 1);
+  color: rgba(38, 50, 71, 1);
+}
+
+a {
+  font-family: Helvetica;
+  font-size: 13pt;
+}
+
+main {
+  margin-right: 18em;
+  margin-left: 18em;
+}
+
+footer {
+  background-color: rgba(38, 50, 71, 1);
+}
+
+footer p {
+  font-size: 11pt;
+}
+
+footer h3 {
+  font-size: 16pt;
+  letter-spacing: 1px;
+}
+
+footer h4 {
+  font-size: 13pt;
+}
+
+.footerGRID {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  padding: 5em;
+  margin-right: 18em;
+  margin-left: 18em;
+  color: white;
+}
+
+footer li {
+  list-style: none;
+  line-height: 1.7em;
+  font-family: Helvetica small;
+  font-size: 11pt;
+}
+
+.colorBG {
+  background-color: rgba(7, 98, 200, 1);
+  padding: 1em;
+  color: white;
+}
