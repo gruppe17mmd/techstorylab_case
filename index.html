@@ -33,10 +33,11 @@
       </nav>
     </header>
     <main>
+      <br />
       <section>
         <div>
           <h1>Tech & Story Lab</h1>
-          <h2>Tech og Story Lab er et lab med fokus på en ny teknologi for KEAs studerende, undervidere og øvrige ansatte.</h2>
+          <h2>Tech og Story Lab er et lab med fokus på en ny teknologi for KEAs studerende, undervisere og øvrige ansatte.</h2>
         </div>
         <div class="grid2_1">
           <div>
@@ -79,16 +80,28 @@
           </div>
         </div>
       </section>
+      <br />
       <section>
-        <div>her skal der være brugerinput kasser :)</div>
-      </section>
-      <section class="flex4">
         <div>
           <h2>Adgang til labbet</h2>
           <p>
             Tech & Story Lab er åbent for alle studerende, undervisere og øvrige ansatte på KEA. Du finder os på Guldbergsgade 29N, 2200 KBH N, i stueplan bag receptionen. Vi har åbent mandag-fredag
             fra kl. 09-15. Har du spørgsmål til Tech & Story Lab, er du altid velkommen til at kigge forbi eller sende os en mail.
           </p>
+        </div>
+      </section>
+      <section class="grid1_1">
+        <div>
+          <form class="brugerinput">
+            <label for="navn">Navn:</label>
+            <input type="text" id="navn" name="navn" placeholder="For- og efternavn" required /> <br /><br />
+            <label for="Skole-mail">Skole-mail:</label>
+            <input type="text" id="Skole-mail" name="Skole-mail" placeholder="Din skole-mail" required /><br /><br />
+            <label for="besked">Spørgsmål/grund til henvendelse</label><br />
+            <textarea id="besked" name="besked" rows="4" cols="50"></textarea><br /><br />
+            <p>Har du brug for hjælp med et større problem, kan du sende os en mail eller møde os nede i Tech and Story Lab på Guldbergsgade 29N</p>
+            <input type="submit" value="Submit" id="submit" />
+          </form>
         </div>
         <div><img src="img/kort.png" alt="kort over kea" class="kortIMG" /></div>
       </section>

@@ -65,11 +65,61 @@
   width: 100%;
 }
 
+label {
+  font-family: Helvetica small;
+}
+
+#navn {
+  width: 100%;
+  border: solid 2px rgba(38, 50, 71, 1);
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Helvetica small;
+  font-size: 11pt;
+}
+
+#Skole-mail {
+  width: 100%;
+  border: solid 2px rgba(38, 50, 71, 1);
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Helvetica small;
+  font-size: 11pt;
+}
+
+#besked {
+  width: 100%;
+  resize: none;
+  border: solid 2px rgba(38, 50, 71, 1);
+  border-radius: 5px;
+  margin-bottom: 1em;
+  font-family: Helvetica small;
+  font-size: 11pt;
+}
+
+#submit {
+  padding: 9px;
+  font-family: Helvetica small;
+  font-size: 11pt;
+  color: rgb(255, 255, 255);
+  border: solid 2px rgba(38, 50, 71, 1);
+  border-radius: 5px;
+  margin-bottom: 1em;
+  background-color: rgba(38, 50, 71, 1);
+}
+
+.brugerinput {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 @media (max-width: 750px) {
-  main {
-    margin-right: 1em;
-    margin-left: 1em;
-  }
   .grid2_1 {
     display: flex;
     flex-direction: column;
