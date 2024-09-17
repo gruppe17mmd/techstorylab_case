@@ -1,1 +1,0 @@
-# techstorylab_case
