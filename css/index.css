@@ -33,6 +33,11 @@
   gap: 2em;
 }
 
+.btndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .grid1_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,10 +111,11 @@ label {
   font-family: Helvetica small;
   font-size: 11pt;
   color: rgb(255, 255, 255);
-  border: solid 2px rgba(38, 50, 71, 1);
+  border: solid 2px rgba(232, 79, 67, 1);
   border-radius: 5px;
   margin-bottom: 1em;
-  background-color: rgba(38, 50, 71, 1);
+  background-color: rgba(232, 79, 67, 1);
+  cursor: pointer;
 }
 
 .brugerinput {

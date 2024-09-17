@@ -106,9 +106,6 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
-.off-screen-menu {
-  display: inline;
-}
 .EN_container {
   background-color: white;
   color: rgba(232, 79, 67, 1);
