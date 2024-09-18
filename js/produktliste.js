@@ -11,15 +11,13 @@ fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products", {
   .then((res) => res.json())
   .then(showData);
 
-function showData(items) {
-  //console.log(items);
-  items.forEach(showitem);
-}
-
-function showitem(item) {
-  const template = document.querySelector("#smallItemTemplate").content;
-
-  const copy = template.cloneNode(true);
-
-  copy.querySelector("h2").textContent = item.Type;
+function showData(data) {
+  data.forEach((element) => {
+    console.log(element);
+    const link = document.createElement("a");
+    link.href = `produkt.html?id=${element.id}`;
+    link.textContent = element.Mærke;
+    link.textContent = element["Produktnavn og model"];
+    document.body.appendChild(link);
+  });
 }

@@ -1,99 +1,127 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #D9D9D9;
+  font-family: Arial, sans-serif;
+  background-color: #d9d9d9;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 p {
-    font-size: 16px;
-    color: #000000;
+  font-size: 16px;
+  color: #000000;
 }
 
 a {
-    color: #0066cc;
-    text-decoration: none;
+  color: #0066cc;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .sidebar {
-    background-color: #0066cc;
-    color: white;
-    width: 50%;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-left: 50%;
+  background-color: rgba(232, 79, 67, 1);
+  color: white;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 50%;
 }
 
 .sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .sidebar h3 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 /* Category Section Styling */
 .categories h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-    gap: 20px; /* Space between the items */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 20px; /* Space between the items */
 }
 
 .category {
-    position: relative;
-    background-color: #0066cc;
-    width: 100%;
+  position: relative;
+  background-color: #0066cc;
+  width: 100%;
 }
 
 .category img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 .category h3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30%;
-    background-color: #0066cc;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.box1{    background-color: #0066cc;
+.box1 {
+  background-color: #0066cc;
+  padding: 2em;
 }
 
 .box2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.letterGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.letterGroup a {
+  text-decoration: none;
+  padding: 3em;
+  color: white;
+  background-color: rgb(29, 37, 52);
+  border-radius: 5px;
+  padding: 2em;
+  text-align: center;
+}
+
+.letterGroup a:hover {
+  transition: ease-in 0.3s;
+  transform: scale(1.01);
+  filter: brightness(80%);
+}
+
+.brandList {
+  padding: 2em;
 }

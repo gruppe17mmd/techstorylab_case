@@ -1,6 +1,5 @@
-//https://rzhyrlurvdibvkxkycpu.supabase.co
-
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ6aHlybHVydmRpYnZreGt5Y3B1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NTYwMTcsImV4cCI6MjA0MTUzMjAxN30.Xw7NBVRpvHDXbMvN0o0LzXZlvAyB5QfLDBdjwkaEhQk
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
 
 fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products", {
   method: "GET",
@@ -12,9 +11,11 @@ fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products", {
   .then((res) => res.json())
   .then(showData);
 
-function showData(items) {
-  console.log(items);
-  //items.forEach()
+function showData(data) {
+  data.forEach((element) => {
+    const link = document.createElement("a");
+    link.href = `produkt.html?id=${element.id}`;
+    link.textContent = element.Mærke;
+    document.body.appendChild(link);
+  });
 }
-
-//function () {}
