@@ -124,8 +124,25 @@ label {
   flex-direction: column;
   justify-content: space-around;
 }
+@media (max-width: 1625px) {
+  .brugerinput {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 
-@media (max-width: 850px) {
+@media (max-width: 1120px) {
+  .brugerinput {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 940px) {
   .grid2_1 {
     display: flex;
     flex-direction: column;
@@ -154,7 +171,12 @@ label {
   }
 
   .brugerinput {
-    justify-content: center;
-    padding-bottom: 2em;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kortIMG {
+    max-width: 500px;
   }
 }
