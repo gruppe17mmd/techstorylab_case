@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products?id=eq.${id}", {
+fetch(`https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products?Asset ID=eq.${id}`, {
   method: "GET",
   headers: {
     apikey:
@@ -13,6 +13,13 @@ fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products?id=eq.$
 
 function showData(data) {
   console.log(data);
-  const singleProduct = data[0];
-  document.querySelector("h2").textContent = singleProduct.Mærke;
+
+  const html = /*html*/ `
+  <div class= "product_item">
+  <h2>Produktnavn og model</h2>
+         <p class="mærke">${data[0].Mærke}</p>
+         <p class="Taksonomi1">${data[0]["Taksonomi 1"]}</p>
+        
+         </div>`;
+  document.querySelector("#product_container").insertAdjacentHTML("beforeend", html);
 }

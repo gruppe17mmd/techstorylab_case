@@ -161,13 +161,6 @@ header {
   transform-origin: center;
 }
 
-/* 
-<div class="header_container">
-        <div class="EN_container"></div>
-        <div class="lup_container"></div>
-      </div>
-      */
-
 .logo {
   width: 200px;
   height: auto;
@@ -189,6 +182,36 @@ header {
   text-decoration: none;
   font-weight: 200;
   font-size: 15pt;
+}
+
+.produkt_navn {
+  font-size: 17pt;
+  font-weight: 300;
+}
+
+.mærke {
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.Taksonomi1 {
+  font-size: 11pt;
+}
+
+.product_item {
+  line-height: 1.5em;
+  background-color: rgba(7, 98, 200, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LæsMereBTN {
+  color: white;
+}
+
+.product_text {
 }
 
 @media (max-width: 850px) {

@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("category");
+const category = urlParams.get("Category");
 
 fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products", {
   method: "GET",
@@ -12,12 +12,58 @@ fetch("https://rzhyrlurvdibvkxkycpu.supabase.co/rest/v1/projekt_products", {
   .then(showData);
 
 function showData(data) {
-  data.forEach((element) => {
+  // const filteredProducts = data.filter((product) => product.Category === category);
+  //console.log(filteredProducts);
+  console.log(data);
+
+  let filteredProducts = [];
+  console.log(category);
+
+  if (category === "FotoOglyd") {
+    console.log("hej");
+
+    filteredProducts = data.filter((product) =>
+      [
+        "Camera Mounts",
+        "Camera Lenses",
+        "Light kits and Reflectors",
+        "Wheeled devices",
+        "Camera with Lens",
+        "Tripods and Monopods",
+        "Microphones and Audio Recorders",
+        "Camera Stabilisers",
+        "Head-mounted Display (HMD)",
+        "Camera with Lens and Stabiliser",
+      ].includes(product.Type.trim())
+    );
+  } else if (category === "Studios") {
+    filteredProducts = data.filter((product) => ["Studio facilities"].includes(product.Type.trim()));
+  } else if (category === "EnhederKablerOgAdaptere") {
+    filteredProducts = data.filter((product) => ["Accessories", "Wall chargers", "Converts connector types", "Development kits", "Smartphones"].includes(product.Type.trim()));
+    //kode til VRAI
+  } else if (category === "VROgAI") {
+    filteredProducts = data.filter((product) => ["Artificial Intelligence", "Development Boards", "Peripheral Devices", "Board Games"].includes(product.Type.trim()));
+  } else {
+    console.log("nothing was found");
+  }
+  console.log(filteredProducts);
+
+  filteredProducts.forEach((element) => {
     console.log(element);
-    const link = document.createElement("a");
-    link.href = `produkt.html?id=${element.id}`;
-    link.textContent = element.Mærke;
-    link.textContent = element["Produktnavn og model"];
-    document.body.appendChild(link);
+
+    const html = /*html*/ `
+   <div class= "product_item">
+   <div class= "product_text">
+   <h3 class="produkt_navn">${element["Produktnavn og model"]}</h3>
+          <p class="mærke">${element.Mærke}</p>
+          <p class="Taksonomi1">${element["Taksonomi 1"]}</p>
+          </div>
+          <div class="product_link">
+
+          <a href="produkt.html?id=${element["Asset ID"]}" class="LæsMereBTN">Se Mere</a>
+          </div>
+          </div>
+          `;
+    document.querySelector("#product_container").insertAdjacentHTML("beforeend", html);
   });
 }
