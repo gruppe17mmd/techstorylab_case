@@ -1,0 +1,16 @@
+.product_item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-radius: 5px;
+}
+
+.link_style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummy_style {
+  max-width: 150px;
+  border-radius: 5px;
+}

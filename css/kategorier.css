@@ -39,10 +39,16 @@ a:hover {
 .sidebar {
   background-color: rgba(232, 79, 67, 1);
   color: white;
-  width: 50%;
+  max-width: 60%;
   padding: 20px;
   margin-bottom: 20px;
-  margin-left: 50%;
+  margin-left: 20%;
+}
+
+.box2_aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar h2 {
@@ -100,7 +106,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
 }
 
-.letterGroup {
+/* .letterGroup {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
@@ -124,4 +130,4 @@ a:hover {
 
 .brandList {
   padding: 2em;
-}
+} */

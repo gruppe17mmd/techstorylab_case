@@ -37,7 +37,9 @@ function showData(data) {
       ].includes(product.Type.trim())
     );
   } else if (category === "Studios") {
-    filteredProducts = data.filter((product) => ["Studio facilities"].includes(product.Type.trim()));
+    console.log("hej");
+
+    filteredProducts = data.filter((product) => ["Smartphones"].includes(product.Type.trim()));
   } else if (category === "EnhederKablerOgAdaptere") {
     filteredProducts = data.filter((product) => ["Accessories", "Wall chargers", "Converts connector types", "Development kits", "Smartphones"].includes(product.Type.trim()));
     //kode til VRAI
@@ -48,18 +50,19 @@ function showData(data) {
   }
   console.log(filteredProducts);
 
+  //her skal der være en qs der indsætter en h2 overskrift til kategorier
+
   filteredProducts.forEach((element) => {
     console.log(element);
 
     const html = /*html*/ `
+   
    <div class= "product_item">
-   <div class= "product_text">
+   <img src="../img/Kamera_dummy.webp" alt="dummy" class="dummy_style">
+   <div>
    <h3 class="produkt_navn">${element["Produktnavn og model"]}</h3>
-          <p class="mærke">${element.Mærke}</p>
-          <p class="Taksonomi1">${element["Taksonomi 1"]}</p>
-          </div>
-          <div class="product_link">
-
+          <p class="mærke">${element.Mærke}</p> </div>
+          <div class="link_style">
           <a href="produkt.html?id=${element["Asset ID"]}" class="LæsMereBTN">Se Mere</a>
           </div>
           </div>
@@ -67,3 +70,5 @@ function showData(data) {
     document.querySelector("#product_container").insertAdjacentHTML("beforeend", html);
   });
 }
+
+// <p class="Taksonomi1">${element["Taksonomi 1"]}</p>

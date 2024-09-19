@@ -1,0 +1,40 @@
+.anbefalet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.anbefalet_section {
+  background-color: rgba(7, 98, 200, 1);
+  margin: 1em;
+  border-radius: 5px;
+  padding: 1em;
+  color: white;
+}
+
+.dummy_style {
+  border-radius: 5px;
+  max-width: 500px;
+  margin-right: 2em;
+}
+
+.product_item {
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.anbefalet img {
+  width: auto;
+  max-height: 300px;
+  border-radius: 5px;
+}
+
+.produkt_navn {
+  font-size: 20pt;
+}

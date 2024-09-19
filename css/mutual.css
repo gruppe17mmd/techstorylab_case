@@ -168,8 +168,9 @@ header {
 
 .nav {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  word-spacing: 1em;
 }
 
 .nav ul li {
@@ -182,6 +183,10 @@ header {
   text-decoration: none;
   font-weight: 200;
   font-size: 15pt;
+}
+
+.nav ul li a:hover {
+  filter: brightness(90%);
 }
 
 .produkt_navn {
@@ -205,13 +210,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1em;
+  margin: 1em;
 }
 
 .LæsMereBTN {
-  color: white;
+  color: rgba(38, 50, 71, 1);
+  padding: 20px 30px;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1em;
 }
 
-.product_text {
+.LæsMereBTN:hover {
+  filter: brightness(90%);
 }
 
 @media (max-width: 850px) {

@@ -15,10 +15,14 @@ function showData(data) {
   console.log(data);
 
   const html = /*html*/ `
+
   <div class= "product_item">
-  <h2>Produktnavn og model</h2>
+     <img src="../img/Kamera_dummy.webp" alt="dummy billede af kamera" class="dummy_style">
+     <div class="product_text">
+  <h2 class="produkt_navn">${data[0]["Produktnavn og model"]}</h2>
          <p class="mærke">${data[0].Mærke}</p>
          <p class="Taksonomi1">${data[0]["Taksonomi 1"]}</p>
+         </div>
         
          </div>`;
   document.querySelector("#product_container").insertAdjacentHTML("beforeend", html);
